@@ -18,13 +18,19 @@ Object.keys(obj).forEach((key) => {
   Object.defineProperty(obj, key, {
     get() {
       console.log(`监听到obj对象的${key}属性被访问了`);
+      // 默认返回 undefined
+      return value;
     },
     set(newValue) {
       console.log(`监听到obj对象的${key}属性被设置了`);
+      // ! 因为是闭包，所以我们设置 value 的值就可以
       value = newValue;
     },
   });
 });
 
-console.log(obj.name);
 obj.name = "kobe";
+obj.age = 30;
+
+console.log(obj.name);
+console.log(obj.age);
