@@ -31,9 +31,17 @@ function foo(type) {
 
     // 4. 真实开发中 JS 已经给我们提供了一个 Error 类
     // * 这个类里面是不提供 errorCode 的，我们可以自己搞一个类，让我们的类继承 Error 类。不过前端用 errorCode 也比较少一点
-    throw new Error("type不能为0~");
+    const error = new Error("type不能为0~");
+    console.log(error.message);
+    console.log(error.name);
+    console.log(error.stack);
+    throw error;
     // throw new GYError(-1001, "type 不能为0~");
     // * Error 类返回的信息其实对应的是函数的调用栈
+
+    // 5. Error 的子类
+    // const error = new TypeError("当前 tyoe 类型是错误的~")
+    // throw error
   }
   console.log("foo函数结束执行");
 }
