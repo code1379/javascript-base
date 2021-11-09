@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>早期 js 没有模块化，模拟两人开发</p>
+  <p>最早的模块化的雏形，使用函数。</p>
+  <script src="./why/index.js"></script>
+  <!-- kobe 加了一行代码，然后 why.js 中的代码执行不了了。 -->
+  <!-- 因为没有单独的作用域 -->
+  <!-- ! 如何解决？ 使用函数套一层，因为函数有自己的作用域 -->
+  <script src="./kobe/index.js"></script>
+  <script src="./why/why.js"></script>
+</body>
+
+</html>
