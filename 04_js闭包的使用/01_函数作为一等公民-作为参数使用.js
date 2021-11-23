@@ -21,7 +21,7 @@ foo(123);
 
 //我不知道你要加减，你把你计算的函数传递进来
 function calc(num1, num2, calcFn) {
-  calcFn(num1, num2);
+  console.log(calcFn(num1, num2));
 }
 
 function add(num1, num2) {
