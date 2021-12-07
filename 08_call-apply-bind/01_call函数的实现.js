@@ -15,7 +15,7 @@ Function.prototype.gyCall = function (thisObj, ...restParameters) {
   // } else {
   //   thisObj = window;
   // }
-  thisObj = thisObj ? Object(thisObj) : window;
+  thisObj = thisObj == null ? Object(thisObj) : window;
 
   // fn();
   // TODO 让函数 fn 中的 this  指向 thisObj
